@@ -18,7 +18,7 @@ function onClose(_event) {
       id="title"
       class="absolute bottom-[222px] left-[18%]"
     >
-      <p class="font-[Didot] text-white  xl:text-[224px] text-[15.5vw] leading-none" v-if="!isOpen">Explore</p>
+      <p class="animated-text font-[Didot] text-white  xl:text-[224px] text-[15.5vw] leading-none" v-if="!isOpen">Explore</p>
       <div class="flex cursor-pointer" @click="openModal">
         <img src="../assets/Plus.svg" alt="plus" class="md:w-[43px] md:h-[43px] w-[32px] h-[32px]"/>
         <p
@@ -63,5 +63,19 @@ function onClose(_event) {
   transform-origin: 18% calc(100% - 210px);
 }
 
+.animated-text {
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 </style>
